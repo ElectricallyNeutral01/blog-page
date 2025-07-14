@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6366f1;
+  --secondary: #8b5cf6;
+  --dark: #0f172a;
+  --darker: #020617;
+  --light: #e2e8f0;
+}
+
+body {
+  @apply bg-gradient-to-br from-[var(--darker)] to-[var(--dark)] text-[var(--light)] min-h-screen font-sans;
+}
+
+.glow-card {
+  @apply transition-all duration-300 border border-gray-700 rounded-xl;
+}
+
+.glow-card:hover {
+  @apply shadow-lg shadow-[var(--primary)]/20 border-[var(--primary)] transform -translate-y-1;
+}
+
+.spec-highlight {
+  @apply font-bold text-[var(--primary)] inline;
+}
